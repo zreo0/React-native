@@ -24,7 +24,7 @@ export default class navigator extends Component {
       <Navigator
         initialRoute = {{name : defaultName , component: defaultComponent}}
         configureScene = {(route) => {
-          return Navigator.SceneConfigs.VerticalDownSwipeJump;
+          return Navigator.SceneConfigs.FloatFromRight;
         }}
         renderScene={(route,navigator) => {
             let Component = route.component;

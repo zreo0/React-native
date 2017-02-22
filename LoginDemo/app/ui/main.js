@@ -37,7 +37,10 @@ export default class LoginActivity extends Component {
             this.password = text;
         }}/>
         <LoginButton name='登录' onPressCallback={this.onPressCallback}/>
-        <Text style={{color:"#4A90E2",textAlign:'center',marginTop:10}} >忘记密码？</Text>
+        <TouchableOpacity onPress={this.onPressForgetPwd}>
+          <Text style={{color:"#4A90E2",textAlign:'center',marginTop:10}}>忘记密码？</Text>
+        </TouchableOpacity>
+        
       </View>
      </View>
    )
@@ -62,7 +65,12 @@ export default class LoginActivity extends Component {
     }
   };
 
-  //跳转到第二个页面去
+  onPressForgetPwd = () => {
+    // 忘记密码
+    alert('暂不可用~');
+  }
+
+  // 跳转到第二个页面去
     onLoginSuccess(){
      const { navigator } = this.props;
      if (navigator) {
@@ -79,8 +87,8 @@ class loginLineView extends Component {
   render() {
     return (
         <Text >
-            没有帐号
-          </Text>
+          没有帐号
+        </Text>
     );
   }
 }
